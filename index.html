@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <!-- Search Input -->
+                <h4 class="searchLabel">Search for a City</h4>
+                <input type="text" name="city-input" id="cityInput">
+                <button type="submit" id="searchBtn">go</button>
+
+
+            </div>
+            <div class="col-10">
+                <div class="row">
+                    <ul>
+                        <li><h3 id="cityNameDate"></h3></li>
+                        <li id="cityTemp"></li>
+                        <li id="cityHum"></li>
+                        <li id="cityWind"></li>
+                        <li id="cityUV"></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li><h3 id="5-DayForecast">5-Day Forecast:</h3></li>
+                    </ul>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-1">
+                        <ul>
+                            <li><h5 id="1Date"></h5></li>
+                            <li id="1Temp"></li>
+                            <li id="1Hum"></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li><h5 id="2Date"></h5></li>
+                            <li id="2Temp"></li>
+                            <li id="2Hum"></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li><h5 id="3Date"></h5></li>
+                            <li id="3Temp"></li>
+                            <li id="3Hum"></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li><h5 id="4Date"></h5></li>
+                            <li id="4Temp"></li>
+                            <li id="4Hum"></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-2">
+                        <ul>
+                            <li><h5 id="5Date"></h5></li>
+                            <li id="5Temp"></li>
+                            <li id="5Hum"></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
