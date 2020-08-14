@@ -12,7 +12,10 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-2 bg-secondary searchbar">
+            <h1>Weather Dashboard</h1>
+        </div>
+        <div class="row">
+            <div class="col-3 bg-secondary searchbar" id="search-complex">
                 <!-- Search Input -->
                 <h4 class="searchLabel">Search for a City</h4>
                 <input type="text" name="city-input" id="cityInput">
@@ -24,15 +27,18 @@
 
 
             </div>
-            <div class="col-10">
+            <div class="col-9">
                 <div class="row">
-                    <ul>
-                        <li><h3 id="cityNameDate"></h3><img alt="weather icon" id="cityIcon"/></li>
-                        <li id="cityTemp"></li>
-                        <li id="cityHum"></li>
-                        <li id="cityWind"></li>
-                        <li id="cityUV"></li>
-                    </ul>
+                    <div class="card">
+                        <ul>
+                            <li><h3 id="cityNameDate"></h3><img alt="weather icon" id="cityIcon"/></li>
+                            <li id="cityTemp"></li>
+                            <li id="cityHum"></li>
+                            <li id="cityWind"></li>
+                            <li id="cityUV"></li>
+                        </ul>
+                    </div>
+ 
                 </div>
                 <div class="row">
                     <ul>
@@ -41,45 +47,45 @@
 
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-md-offset-1">
+                    <div class="col-md-2 col-md-offset-1 card">
                         <ul>
-                            <li><h5 id="1Date"></h5></li>
+                            <li><h6 id="1Date"></h6></li>
                             <li id="1Icon"><img/></li>
                             <li id="1Temp"></li>
                             <li id="1Hum"></li>
 
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 card">
                         <ul>
-                            <li><h5 id="2Date"></h5></li>
+                            <li><h6 id="2Date"></h6></li>
                             <li id="2Icon"><img/></li>
                             <li id="2Temp"></li>
                             <li id="2Hum"></li>
 
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 card">
                         <ul>
-                            <li><h5 id="3Date"></h5></li>
+                            <li><h6 id="3Date"></h6></li>
                             <li id="3Icon"><img/></li>
                             <li id="3Temp"></li>
                             <li id="3Hum"></li>
 
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 card">
                         <ul>
-                            <li><h5 id="4Date"></h5></li>
+                            <li><h6 id="4Date"></h6></li>
                             <li id="4Icon"><img/></li>
                             <li id="4Temp"></li>
                             <li id="4Hum"></li>
 
                         </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 card">
                         <ul>
-                            <li><h5 id="5Date"></h5></li>
+                            <li><h6 id="5Date"></h6></li>
                             <li id="5Icon"><img/></li>
                             <li id="5Temp"></li>
                             <li id="5Hum"></li>

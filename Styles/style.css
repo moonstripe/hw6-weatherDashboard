@@ -1,7 +1,19 @@
-ul {
-    list-style: none;
+.container {
+    padding: 15px 15px;
 }
 
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+
+#search-complex {
+    width: 300px;
+}
+
+#city-input {
+    width: 100%;
+}
 
 .searchbar {
     height: 100%;
