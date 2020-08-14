@@ -15,7 +15,18 @@ $('#cityInput').on('keydown', function (e) {
         var userInput = $(this).val();
         const queryUrlCity = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=dcbd3f6575fe8b0ac1a0e366b4b242e4`
         queryCity(queryUrlCity);
+
+        $('#searchHistory').append($('<li>').text(userInput).addClass('list-group-item'));
+        
     }
+
+});
+
+$('#searchHistory').on('click', function (e) {
+    console.log(e.target.textContent);
+    var userInput = e.target.textContent;
+    const queryUrlCity = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&appid=dcbd3f6575fe8b0ac1a0e366b4b242e4`
+    queryCity(queryUrlCity);
 
 });
 function queryCity(queryUrlLatLon) {
@@ -40,6 +51,7 @@ function queryCity(queryUrlLatLon) {
             // alter HTML elements
             
             $('#cityTemp').html(`Temperature: ${response.current.temp} &#176;F`);
+            $('#cityIcon').attr('src', `http://openweathermap.org/img/wn/${response.current.weather[0].icon}@2x.png`);
             $('#cityHum').html(`Humidity: ${response.current.humidity}&#37;`);
             $('#cityWind').html(`Wind Speed: ${response.current.wind_speed} MPH`);
             $('#cityUV').html(`UV Index: ${response.current.uvi}`);
@@ -48,7 +60,8 @@ function queryCity(queryUrlLatLon) {
             for (let index = 1; index < 6; index++) {
                 console.log(response.daily[index]);
                 $(`#${index}Date`).html(moment.unix(response.daily[index].dt).format('L'));
-                $(`#${index}Temp`).html(`Temp: ${response.daily[index].temp.max.toFixed(1)} &#176;F`);
+                $(`#${index}Icon`).children(0).attr('src', `http://openweathermap.org/img/wn/${response.daily[index].weather[0].icon}@2x.png`);
+                $(`#${index}Temp`).html(`Temp: ${response.daily[index].temp.max.toFixed(1)}&#176;F`);
                 $(`#${index}Hum`).html(`Humidity: ${response.daily[index].humidity}&#37;`);
 
             }

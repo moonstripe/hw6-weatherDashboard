@@ -2,6 +2,8 @@ ul {
     list-style: none;
 }
 
-h3 {
-    margin-left: 40px;
+
+.searchbar {
+    height: 100%;
+    width: 100%;
 }
