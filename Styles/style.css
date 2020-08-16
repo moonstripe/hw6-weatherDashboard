@@ -2,6 +2,10 @@
     padding: 15px 15px;
 }
 
+#searchHistory {
+    height: 100%;
+}
+
 .bump {
     margin-left: 15px;
 }
@@ -37,11 +41,11 @@ ul {
 }
 
 #city-input {
-    width: 100%;
+    width: auto;
 }
 
 .searchbar {
     padding-top:15px;
     height: 100%;
-    width: 100%;
+    width: 150px;
 }
