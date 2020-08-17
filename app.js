@@ -5,7 +5,7 @@ $(document).ready(function () {
     persist = JSON.parse(localStorage.getItem('savedCities'));
     $('#searchHistory').empty();
     for (let index = 0; index < persist.length; index++) {
-        $('#searchHistory').append($('<li>').text(persist[index]).addClass('list-group-item'));
+        $('#searchHistory').prepend($('<li>').text(persist[index]).addClass('list-group-item'));
 
     }}
 });
@@ -97,7 +97,10 @@ function saveListLocalStorage(searchList, userInput) {
         console.log(searchList);
         $('#searchHistory').empty();
         for (let index = 0; index < searchList.length; index++) {
-            $('#searchHistory').append($('<li>').text(searchList[index]).addClass('list-group-item'));
+            if (searchList.length > 11) {
+                searchList.shift();
+            }
+            $('#searchHistory').prepend($('<li>').text(searchList[index]).addClass('list-group-item'));
 
         }
 
@@ -108,7 +111,10 @@ function saveListLocalStorage(searchList, userInput) {
             console.log(searchList);
             $('#searchHistory').empty();
             for (let index = 0; index < searchList.length; index++) {
-                $('#searchHistory').append($('<li>').text(searchList[index]).addClass('list-group-item'));
+                if (searchList.length > 11) {
+                    searchList.shift();
+                }
+                $('#searchHistory').prepend($('<li>').text(searchList[index]).addClass('list-group-item'));
 
             }
         }
